@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.resources     = "Resources/**/*.{plist,png}"
 
   s.requires_arc  = true
-  s.dependency 'YYUIKit', '~> 0.0.1'
+  # s.dependency 'YYUIKit', '~> 0.0.1'
 
 end

@@ -2,7 +2,7 @@
 //  YYSocialMenuViewController.m
 //  Hermes
 //
-//  Created by 吕 鹏伟 on 14-4-25.
+//  Created by codecooker on 14-4-25.
 //
 //
 
@@ -10,13 +10,14 @@
 #import "YYSocialDataEngine.h"
 #import "YYShareItemCell.h"
 #import "YYSocialPlugin.h"
+#import "UILabel+Coustom.h"
 
 #define kPanelHeight                        (250+50)
 
-@interface YYSocialMenuViewController ()<CPGridViewDataSource,CPGridViewDelegate>{
+@interface YYSocialMenuViewController ()<YYGridViewDataSource,YYGridViewDelegate>{
     YYSocialData* _socialData;
     UIImageView *_panelView;
-    CPGridView *_mainView;
+    YYGridView *_mainView;
     UIButton *_cancelButton;
     UILabel *_titleLabel;
     YYSocialDataShareResponse _socialDataShareResponse;
@@ -69,7 +70,7 @@
     NSInteger colCount     = 4;
     CGSize itemSize        = CGSizeMake(65.0f, 85.0f);
     CGFloat colMargin      = ((CGRectGetWidth(self.view.frame) - 20.0f) - (colCount * itemSize.width)) / (colCount - 1);
-    _mainView              = [[CPGridView alloc]initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.view.frame) - 20.0f, 200) andStyle:CPGridViewStyleAuto];
+    _mainView              = [[YYGridView alloc]initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.view.frame) - 20.0f, 200) andStyle:YYGridViewStyleAuto];
     _mainView.colMargin    = colMargin;
     _mainView.rowMargin    = 10.0f;
     _mainView.gridDelegate = self;
@@ -99,11 +100,11 @@
     return pluginInfo;
 }
 
-- (NSInteger)cellNumOfGridView:(CPGridView *)gridView{
+- (NSInteger)cellNumOfGridView:(YYGridView *)gridView{
     return self.supportSharedPlatforms.count;
 }
 
-- (CPGridViewCell*)GridView:(CPGridView *)gridView itemForIndex:(NSInteger)path
+- (YYGridViewCell*)GridView:(YYGridView *)gridView itemForIndex:(NSInteger)path
 {
     static NSString* cellMark = @"cellMark";
     YYShareItemCell* cell     = [gridView dequeueReusableCellWithIdentifier:cellMark];
@@ -117,7 +118,7 @@
     return cell;
 }
 
-- (NSInteger)gridView:(CPGridView *)gridView didSelectGridAtIndex:(NSInteger)index
+- (NSInteger)gridView:(YYGridView *)gridView didSelectGridAtIndex:(NSInteger)index
 {
     YYSocialPlugin *plugin = [self.supportSharedPlatforms objectAtIndex:index];
     _socialData.shareType      = plugin.type;
@@ -126,7 +127,7 @@
     return 0;
 }
 
-- (CGSize)gridView:(CPGridView *)gridView itemSizeAtIndex:(NSInteger)index
+- (CGSize)gridView:(YYGridView *)gridView itemSizeAtIndex:(NSInteger)index
 {
     return CGSizeMake(65.0f, 85.0f);
 }

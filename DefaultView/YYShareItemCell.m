@@ -2,11 +2,12 @@
 //  YYShareItemView.m
 //  Hermes
 //
-//  Created by 吕 鹏伟 on 14-5-6.
+//  Created by codecooker on 14-5-6.
 //  Copyright (c) 2015年 codecooker.com. All rights reserved.
 //
 
 #import "YYShareItemCell.h"
+#import "UILabel+Coustom.h"
 
 @implementation YYShareItemCell
 

@@ -2,7 +2,7 @@
 //  YYSocialMenuViewController.h
 //  Hermes
 //
-//  Created by 吕 鹏伟 on 14-4-25.
+//  Created by codecooker on 14-4-25.
 //
 //
 
