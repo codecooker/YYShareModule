@@ -1,6 +1,6 @@
 //
 //  YYSocialMenuViewController.h
-//  Hermes
+//  YYShareModule
 //
 //  Created by codecooker on 14-4-25.
 //

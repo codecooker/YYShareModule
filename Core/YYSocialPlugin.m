@@ -1,6 +1,6 @@
 //
 //  YYSocialPlugin.m
-//  Pods
+//  YYShareModule
 //
 //  Created by codecooker on 15/7/7.
 //  Copyright (c) 2015年 codecooker.com. All rights reserved.

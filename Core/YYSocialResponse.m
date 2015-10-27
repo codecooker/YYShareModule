@@ -1,6 +1,6 @@
 //
 //  YYSocialResponse.m
-//  YYUIKit
+//  YYShareModule
 //
 //  Created by Powell.lui on 12/1/13.
 //  Copyright (c) 2013 Powell.lui. All rights reserved.

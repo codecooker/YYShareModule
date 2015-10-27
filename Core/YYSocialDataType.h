@@ -1,6 +1,6 @@
 //
 //  YYSocialDataType.h
-//  Pods
+//  YYShareModule
 //
 //  Created by codecooker on 15/7/28.
 //  Copyright (c) 2015年 codecooker.com. All rights reserved.

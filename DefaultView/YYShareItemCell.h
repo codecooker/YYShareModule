@@ -1,6 +1,6 @@
 //
 //  YYShareItemView.h
-//  Hermes
+//  YYShareModule
 //
 //  Created by codecooker on 14-5-6.
 //  Copyright (c) 2015年 codecooker.com. All rights reserved.
